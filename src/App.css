@@ -40,3 +40,9 @@
 .read-the-docs {
   color: #888;
 }
+
+.board-row .square{
+  border: 2px solid gray;
+  margin: 2px;
+  padding: 2rem;
+}
