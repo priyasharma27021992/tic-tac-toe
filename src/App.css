@@ -46,3 +46,8 @@
   margin: 2px;
   padding: 2rem;
 }
+
+.restart-btn{
+    background: black;
+    color: white;
+}

@@ -14,6 +14,10 @@ export const Board = () => {
     status = "Next player: " + (xIsNext ? "X" : "O");
   }
 
+  const handleReset = () => {
+    setSquares(Array(9).fill(null));
+  };
+
   const handleClick = (i: number) => {
     if (squares[i] || calculateWinner(squares)) {
       return;
@@ -29,6 +33,9 @@ export const Board = () => {
   };
   return (
     <>
+      <button className="restart-btn" onClick={handleReset}>
+        Re-Start
+      </button>
       <div className="status">{status}</div>
       <div className="board-row">
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
