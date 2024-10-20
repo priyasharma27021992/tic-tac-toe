@@ -1,7 +1,15 @@
-import { Square } from "./Square";
 import { calculateWinner } from "../utils/calculateWinner";
+import { Square } from "./Square";
 
-export const Board = ({ xIsNext, squares, onPlay }) => {
+export const Board = ({
+  xIsNext,
+  squares,
+  onPlay,
+}: {
+  xIsNext: boolean;
+  squares: string[];
+  onPlay: (nextSquares: string[]) => void;
+}) => {
   const winner = calculateWinner(squares);
   let status;
 
